@@ -1,25 +1,28 @@
 import random
 
-n = random.randint(1, 100)
-print("Jag tänker på ett tal mellan 1 och 100. Gissa vilket!")
+max_number = 100
+a_random_int = random.randint(1, max_number)
+print(f"Jag tänker på ett tal mellan 1 och {max_number}. Gissa vilket!")
 
 
 def mainloop():
-    antal_gissningar = 0
-    while True:
-        as_number = ask_number()
-        antal_gissningar += 1
+    guess_count = 0
 
-        if as_number == n:
+    while True:
+        guessed_number = ask_number()
+        guess_count += 1
+
+        if guessed_number == a_random_int:
             print("Rätt!")
             break
 
-        if as_number < n:
+        if guessed_number < a_random_int:
             print("Fel, mitt tal är större. Gissa igen!")
 
-        if as_number > n:
+        if guessed_number > a_random_int:
             print("Fel, mitt tal är mindre. Gissa igen!")
-    return antal_gissningar
+
+    return guess_count
 
 
 def ask_number():
@@ -28,6 +31,4 @@ def ask_number():
     return as_number
 
 
-antal_gissningar = mainloop()
-
-print("Du behövde " + str(antal_gissningar) + " gissningar.")
+print(f"Du behövde {mainloop()} gissningar.")
