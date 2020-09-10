@@ -2,9 +2,12 @@
 # och skriv ut hur många vokaler som finns i strängen. Tips: "a" in "abcd" är True!
 
 def count_vowels(txt):
+    # Längre fram i kursen kommer ni lära er skriva den här funktionen med
+    # en one-liner. Men inte än :)
     vowels = "aouåeiyäö"
     count = 0
     for letter in txt:
+        # Operatorn "in" kan användas både på listor och strängar. Trevligt!
         if letter in vowels:
             count += 1
     return count
