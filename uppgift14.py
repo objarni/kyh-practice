@@ -22,6 +22,8 @@ def run():
             colors.append(item)
         else:
             rest.append(item)
+
+    # Skriv ut allt som nu sorterats i kategorier
     write_things(cars, 'Cars')
     write_things(fruits, 'Fruits')
     write_things(colors, 'Colors')
