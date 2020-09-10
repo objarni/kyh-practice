@@ -1,6 +1,9 @@
 # 15.1 Implementera "wordcount" som jag och Christoffer byggde
 
 def wordcount(text):
+    # 1. Dela texten i mellanrum (med split)
+    # 2. Beräkna längden på resultatlistan
+    # 3. Profit
     return len(text.split())
 
 
