@@ -13,6 +13,10 @@ def game(number_of_questions, max_value):
         a = random.randint(1, max_value)
         b = random.randint(1, max_value)
 
+        # Genom att skapa en oändlig loop, som bara
+        # bryter när vi når rad 24, är vi säkra på
+        # att number alltid är ett heltal på rad
+        # 27 och framåt.
         while True:
             answer = input(f"{a} + {b}")
             try:
@@ -34,6 +38,10 @@ def game(number_of_questions, max_value):
 
 
 if __name__ == '__main__':
+    # Vi använder try-except för att fånga
+    # icke-heltal från användaren, och sätter
+    # i så fall våra "defaultvärden" (3 för
+    # antal frågor, och 10 som maxslumptal)
     try:
         number = int(input("Hur många frågor?"))
     except ValueError:
