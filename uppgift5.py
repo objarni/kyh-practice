@@ -1,8 +1,9 @@
 import random
 
-max_number = 100
-a_random_int = random.randint(1, max_number)
-print(f"Jag tänker på ett tal mellan 1 och {max_number}. Gissa vilket!")
+maxnum = 100
+a_random_int = random.randint(1, maxnum)
+
+print(f"Jag tänker på ett tal mellan 1 och {maxnum}. Gissa vilket!")
 
 
 def mainloop():
@@ -30,5 +31,9 @@ def ask_number():
     as_number = int(text)
     return as_number
 
+# Anropa mainloop som är "huvudprogrammet"
+# Spara resultatet från mainloop för utskrift
+gissningar = mainloop()
 
-print(f"Du behövde {mainloop()} gissningar.")
+# Använd variabeln
+print(f"Du behövde {gissningar} gissningar.")

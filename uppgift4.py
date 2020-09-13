@@ -3,7 +3,9 @@ import random
 n = random.randint(1, 100)
 print("Jag tänker på ett tal mellan 1 och 100. Gissa vilket!")
 
-# Det enda som egenglit
+# Det enda som egentligen ändrats från uppg3 är variabeln
+# antal_gissningar som håller reda på hur många gånger
+# användaren gissat, för att kunna skriva ut detta på slutet.
 antal_gissningar = 0
 
 while True:
