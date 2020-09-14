@@ -1,5 +1,11 @@
+# standard library imports
 import random
+
+# third party (PyPI / cheese shop)
 import pygame
+
+# local / project
+import calc
 
 pygame.init()
 
