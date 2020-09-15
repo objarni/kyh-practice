@@ -2,6 +2,7 @@ FRUITS = ['banana', 'apple', 'orange']
 CARS = ['volvo', 'ford', 'tesla']
 COLORS = ['blue', 'magenta']
 
+
 def run():
     # Split för att dela med kommatecken
     # string -> list of string
