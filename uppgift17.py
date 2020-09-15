@@ -41,7 +41,7 @@ def mainmenu(todo_list):
             if 0 < item_number <= len(todo_list):
                 print(f"You have deleted task {todo_list[item_number-1]}")
                 del todo_list[item_number - 1]
-            else:+
+            else:
                 print(f"There is no task with than number")
         if answer == 4:
             return todo_list
