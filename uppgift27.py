@@ -63,58 +63,10 @@ Tips 2: Notera att det finns ett attribut "rightalign" i datan, som beskriver om
 
 # förlaga
 # https://www.oboy.se/~/media/oboy/se/images/products/original-mobile.png?la=sv-SE
+import json
+from pathlib import Path
 
-
-contents = [
-    {
-        'what': 'Energi',
-        'value': 385,
-        'unit': 'kcal',
-        'rightalign': False
-    },
-    {
-        'what': 'Fett',
-        'value': 2.7,
-        'unit': 'g',
-        'rightalign': False
-    },
-    {
-        'what': 'varav mättat fett',
-        'value': 1.7,
-        'unit': 'g',
-        'rightalign': True
-    },
-    {
-        'what': 'Kolhydrat',
-        'value': 82,
-        'unit': 'g',
-        'rightalign': False
-    },
-    {
-        'what': 'varav sockerarter',
-        'value': 79.5,
-        'unit': 'g',
-        'rightalign': True
-    },
-    {
-        'what': 'Fiber',
-        'value': 6.7,
-        'unit': 'g',
-        'rightalign': False
-    },
-    {
-        'what': 'Protein',
-        'value': 4.6,
-        'unit': 'g',
-        'rightalign': False
-    },
-    {
-        'what': 'Salt',
-        'value': .48,
-        'unit': 'g',
-        'rightalign': False
-    }
-]
+contents = json.loads(Path('uppgift27.json').read_text(encoding='utf8'))
 
 for item in contents:
     what = item['what']
