@@ -1,3 +1,5 @@
 venv/
 .idea/
+.pytest_cache/
 phonebook.json
+../kyh-examples/examples/uppgift29.html
