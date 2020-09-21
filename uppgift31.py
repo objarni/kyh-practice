@@ -30,10 +30,7 @@ def run():
     indata = input("Mata in några heltal: ")
     nums_as_strings = indata.split(",")
     backwards = ', '.join(nums_as_strings[::-1])
-    as_ints = []
-    for elem in nums_as_strings:
-        as_ints.append(int(elem))
-    total = sum(as_ints)
+    total = sum([int(elem) for elem in nums_as_strings])
     print(f"Första talet: {nums_as_strings[0]}")
     print(f"Sista talet: {nums_as_strings[-1]}")
     print(f"Summering: {total}")
