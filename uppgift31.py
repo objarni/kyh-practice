@@ -1,41 +1,36 @@
 '''
-Träna slicing av strängar och listor!
+Ta en kopia på lösningen av uppgift 30!
 
-Reg.nr på bilar i Sverge skrivs traditionellt* med tre bokstäver och tre siffror.
+31.1 I nya filen, byt ut for-loopar mot list-comprehensions så mycket ni kan.
+     Jämför de två filerna, vilken tycker ni är mest läsbar/enklast att förstå?
 
-1. Bygg ett program som låter användaren mata in ett reg.nr och skriv ut de två grupperna
-var för sig; använd slicing-syntax för att dela upp inputsträngen.
+31.2 Utöka 30.2 med följande utskrifter:
 
-Ex.
+    Udda tal: 1, 3, 5
+    Jämna tal: 2, 100
 
-Ange regnr: ABC663
-Bokstävsgrupp: ABC
-Siffergrupp: 663
-
-2. Bygg ett program där användaren matar in ett gäng heltal med komma emellan, och skriver ut följande:
-    Ange tal med komma emellan: 1,2,3,5,100
-    Första talet: 1
-    Sista talet: 100
-    Summan av talen: 111
-    Talen baklänges: 100, 5, 3, 2, 1
-
-Tips: Använd slicing och inbyggda funktionen sum().
-Tips 2: Det går att lösa "Talen baklänges" på två sätt: det lätta sättet
-   är med inbyggda funktionen reverse(). Det svåra sättet är med slicing syntax!
-   Pröva båda :)
-
+Tips: det går att skriva if-uttryck i list-comprehensions! Googla och härma!
 '''
+
 
 def run():
     indata = input("Mata in några heltal: ")
     nums_as_strings = indata.split(",")
     backwards = ', '.join(nums_as_strings[::-1])
-    total = sum([int(elem) for elem in nums_as_strings])
+    nums_as_ints = [int(elem) for elem in nums_as_strings]
+    total = sum(nums_as_ints)
+    odds = [i for i in nums_as_ints if i % 2 == 1]
+    evens = [i for i in nums_as_ints if i % 2 == 0]
     print(f"Första talet: {nums_as_strings[0]}")
     print(f"Sista talet: {nums_as_strings[-1]}")
     print(f"Summering: {total}")
     print(f"Talen baklänges: {backwards}")
+    print(f"Udda tal: {pretty_intlist(odds)}")
+    print(f"Jämna tal: {pretty_intlist(evens)}")
 
+
+def pretty_intlist(list_of_ints):
+    return ', '.join([str(elem) for elem in list_of_ints])
 
 
 if __name__ == '__main__':

@@ -26,6 +26,7 @@ Tips 2: Det går att lösa "Talen baklänges" på två sätt: det lätta sättet
 
 '''
 
+
 def run():
     indata = input("Mata in några heltal: ")
     nums_as_strings = indata.split(",")
@@ -38,7 +39,6 @@ def run():
     print(f"Sista talet: {nums_as_strings[-1]}")
     print(f"Summering: {total}")
     print(f"Talen baklänges: {backwards}")
-
 
 
 if __name__ == '__main__':
