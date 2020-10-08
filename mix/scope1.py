@@ -7,3 +7,6 @@ a = 1
 print(a)
 fn(1)
 print(a)
+
+
+t = (1, 2)
