@@ -23,6 +23,7 @@ def summa(ls):
         s += elem
     return s
 
+
 def produkt(ls):
     p = 1
     for elem in ls:
